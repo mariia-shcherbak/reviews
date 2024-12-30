@@ -25,7 +25,7 @@ class Review {
      * @return array An array of reviews for the specified book
      */
     public function getReviewsByBookId($book_id) {
-        $stmt = $this->db->prepare("SELECT r.*, u.username FROM reviews r JOIN users u ON r.user_id = u.id WHERE r.book_id = ?");
+        $stmt = $this->db->prepare("SELECT r.*, u.username FROM reviews r JOIN users u ON r.user_id = u.id WHERE r.book_id = ? ORDER BY r.created_at DESC");
         $stmt->bind_param("i", $book_id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -80,7 +80,7 @@ class Review {
      * @return array An array of reviews by the specified user
      */
     public function getReviewsByUserId($user_id) {
-        $stmt = $this->db->prepare("SELECT r.*, b.title FROM reviews r JOIN books b ON r.book_id = b.id WHERE r.user_id = ?");
+        $stmt = $this->db->prepare("SELECT r.*, b.title FROM reviews r JOIN books b ON r.book_id = b.id WHERE r.user_id = ? ORDER BY r.created_at DESC");
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
         $result = $stmt->get_result();

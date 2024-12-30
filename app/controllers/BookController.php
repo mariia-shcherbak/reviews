@@ -21,7 +21,7 @@ class BookController extends Controller
         $bookModel = $this->model('Book');
 
 
-        $books = $bookModel->getBooksWithPagination($limit, $offset);
+        $books = $this->sanitizeArrayForOutput($bookModel->getBooksWithPagination($limit, $offset));
 
         $totalBooks = $bookModel->getTotalBooks();
         $totalPages = ceil($totalBooks / $limit);
@@ -43,8 +43,8 @@ class BookController extends Controller
     {
         $bookModel = $this->model('Book');
         $reviewModel = $this->model('Review');
-        $book = $bookModel->getBookById($id);
-        $reviews = $reviewModel->getReviewsByBookId($id);
+        $book = $this->sanitizeArrayForOutput($bookModel->getBookById($id));
+        $reviews = $this->sanitizeArrayForOutput($reviewModel->getReviewsByBookId($id));
         $this->view('books/details', ['book' => $book, 'reviews' => $reviews]);
     }
 }

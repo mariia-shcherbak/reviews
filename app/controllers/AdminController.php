@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Admin Controller
  *
@@ -28,8 +29,8 @@ class AdminController extends Controller
     {
         $bookModel = $this->model('Book');
         $userModel = $this->model('User');
-        $books = $bookModel->getAllBooks();
-        $users = $userModel->getAllUsers();
+        $books = $this->sanitizeArrayForOutput($bookModel->getAllBooks());
+        $users = $this->sanitizeArrayForOutput($userModel->getAllUsers());
 
         return [
             'books' => $books,
@@ -135,8 +136,19 @@ class AdminController extends Controller
             return;
         }
 
+
         $bookId = filter_input(INPUT_POST, 'book_id', FILTER_SANITIZE_NUMBER_INT);
         $bookModel = $this->model('Book');
+
+        $book = $bookModel->getBookById($bookId);
+        if ($book && !empty($book['image'])) {
+        
+            $imagePath = $book['image'];
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+    
         $bookModel->deleteBook($bookId);
 
         $this->redirect('index.php?page=admin');
@@ -249,7 +261,7 @@ class AdminController extends Controller
         }
 
         $bookModel = $this->model('Book');
-        $book = $bookModel->getBookById($_GET['book_id']);
+        $book = $this->sanitizeArrayForOutput($bookModel->getBookById($_GET['book_id']));
 
         if (!$book) {
             $this->redirect('index.php?page=admin');
@@ -270,14 +282,15 @@ class AdminController extends Controller
         }
 
         $bookModel = $this->model('Book');
+
         $bookId = $_POST['id'] ?? null;
-        $title = $_POST['title'] ?? null;
-        $author = $_POST['author'] ?? null;
-        $description = $_POST['description'] ?? null;
+        $title = htmlspecialchars_decode($_POST['title'] ?? '', ENT_QUOTES);
+        $author = htmlspecialchars_decode($_POST['author'] ?? '', ENT_QUOTES);
+        $description = htmlspecialchars_decode($_POST['description'] ?? '', ENT_QUOTES);
         $pages = $_POST['pages'] ?? null;
-        $publisher = $_POST['publisher'] ?? null;
+        $publisher = htmlspecialchars_decode($_POST['publisher'] ?? '', ENT_QUOTES);
         $year = $_POST['year'] ?? null;
-        $country = $_POST['country'] ?? null;
+        $country = htmlspecialchars_decode($_POST['country'] ?? '', ENT_QUOTES);
 
 
         $errors = $this->validateBookData($title, $author, $description, $pages, $publisher, $year, $country);

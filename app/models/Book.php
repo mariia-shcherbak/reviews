@@ -198,7 +198,7 @@ class Book {
         $params = [$title, $author, $description, $pages, $publisher, $year, $country];
         
         if ($image_path !== null) {
-            $sql .= ", image_path = ?";
+            $sql .= ", image = ?";
             $params[] = $image_path;
         }
         

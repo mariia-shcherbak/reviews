@@ -17,7 +17,7 @@ class ReviewController extends Controller
     public function getReviews($book_id)
     {
         $reviewModel = $this->model('Review');
-        $reviews = $reviewModel->getReviewsByBookId($book_id);
+        $reviews = $this->sanitizeArrayForOutput($reviewModel->getReviewsByBookId($book_id));
         header('Content-Type: application/json');
         echo json_encode($reviews);
     }

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * User Controller
  *
@@ -7,7 +6,6 @@
  */
 class UserController extends Controller
 {
-
     /**
      * Handle user login
      *
@@ -17,8 +15,8 @@ class UserController extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userModel = $this->model('User');
-            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-            $password = $_POST['password'];
+            $email = $_POST['email'] ?? null;
+            $password = $_POST['password'] ?? null;
 
             $user = $userModel->getUserByEmail($email);
 
@@ -126,9 +124,9 @@ class UserController extends Controller
         }
 
         $userModel = $this->model('User');
-        $user = $userModel->getUserById($_SESSION['user_id']);
+        $user = $this->sanitizeArrayForOutput($userModel->getUserById($_SESSION['user_id']));
         $reviewModel = $this->model('Review');
-        $reviews = $reviewModel->getReviewsByUserId($_SESSION['user_id']);
+        $reviews = $this->sanitizeArrayForOutput($reviewModel->getReviewsByUserId($_SESSION['user_id']));
 
         $this->view('users/profile', ['user' => $user, 'reviews' => $reviews]);
     }
@@ -161,14 +159,14 @@ class UserController extends Controller
         }
 
 
-        if ($file["size"] > 1000000) {
+        if ($file["size"] > 9000000) {
             return false;
         }
 
 
         if (
             $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-            && $imageFileType != "gif"
+            && $imageFileType != "gif" 
         ) {
             return false;
         }

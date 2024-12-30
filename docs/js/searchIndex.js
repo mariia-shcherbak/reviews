@@ -151,6 +151,11 @@ Search.appendIndex(
             "summary": "Redirect\u0020to\u0020a\u0020URL",
             "url": "classes/Controller.html#method_redirect"
         },                {
+            "fqsen": "\\Controller\u003A\u003AsanitizeArrayForOutput\u0028\u0029",
+            "name": "sanitizeArrayForOutput",
+            "summary": "Sanitize\u0020input\u0020data\u0020to\u0020prevent\u0020XSS\u0020and\u0020other\u0020vulnerabilities.",
+            "url": "classes/Controller.html#method_sanitizeArrayForOutput"
+        },                {
             "fqsen": "\\Database",
             "name": "Database",
             "summary": "Database\u0020Class",

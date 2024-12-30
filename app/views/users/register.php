@@ -9,7 +9,6 @@
  * @subpackage Users
  */
 ?>
-
 <main class="container">
     <div class="form-container">
         <h2>Register</h2>
