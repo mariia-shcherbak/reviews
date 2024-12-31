@@ -42,7 +42,6 @@ Pro registraci postupujte následovně:
  **Heslo:**
 
 1. Délka: minimálně 8 znaků
-2. Musí obsahovat alespoň jedno velké písmeno, jedno malé písmeno a jedno číslo
 
 
 
@@ -92,7 +91,7 @@ Pro přihlášení:
 
 Na hlavní stránce najdete seznam knih. Můžete:
 
-- Procházet knihy pomocí stránkování ve spodní části seznamu.
+- Procházet knihy pomocí stránkování.
 - Kliknout na knihu pro zobrazení podrobností a recenzí.
 
 
@@ -176,7 +175,6 @@ Ve svém profilu můžete:
  Odstranit své recenze:
 
 1. Klikněte na tlačítko "Delete" u příslušné recenze
-2. Potvrďte smazání
 
 
 
