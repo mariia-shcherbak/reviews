@@ -16,14 +16,14 @@ BookReviews je webová aplikace, která umožňuje uživatelům prohlížet knih
 6. [Administrátorské funkce](#administrátorské-funkce)
 
 
-## Registrace
+## Registrace 
 
 Pro registraci postupujte následovně:
 
 1. Klikněte na tlačítko "Registrovat" v horní části stránky.
 2. Vyplňte následující pole:
 
-1. **Uživatelské jméno:**
+ **Uživatelské jméno:**
 
 1. Musí být jedinečné
 2. Délka: 3-25 znaků
@@ -32,21 +32,21 @@ Pro registraci postupujte následovně:
 
 
 
-2. **E-mail:**
+ **E-mail:**
 
 1. Musí být platná e-mailová adresa
 2. Musí být jedinečný (nemůže být použit pro více účtů)
 
 
 
-3. **Heslo:**
+ **Heslo:**
 
 1. Délka: minimálně 8 znaků
 2. Musí obsahovat alespoň jedno velké písmeno, jedno malé písmeno a jedno číslo
 
 
 
-4. **Potvrzení hesla:**
+ **Potvrzení hesla:**
 
 1. Musí být shodné s heslem zadaným výše
 
@@ -55,17 +55,17 @@ Pro registraci postupujte následovně:
 
 
 
-3. Nahrajte profilovou fotografii:
+ Nahrajte profilovou fotografii:
 
 1. Povolené formáty: JPG, JPEG, PNG, GIF
 2. Maximální velikost: 2 MB
 
 
 
-4. Klikněte na tlačítko "Registrovat".
+ Klikněte na tlačítko "Registrovat".
 
 
- ![Registrace](DOC_FOTO/Снимок экрана 2024-12-31 040450.png)
+ ![Registrace](DOC_FOTO/040450.png)
 
 
 
@@ -73,19 +73,19 @@ Pro registraci postupujte následovně:
 
 Pro přihlášení:
 
-1. Klikněte na tlačítko "Login" v horní části stránky.
-2. Zadejte:
+ Klikněte na tlačítko "Login" v horní části stránky.
+ Zadejte:
 
 1. E-mail: Váš registrovaný e-mail
 2. Heslo: Vaše heslo
 
 
 
-3. Klikněte na tlačítko "Přihlásit se".
+ Klikněte na tlačítko "Přihlásit se".
 
 
 
- ![Přihlášení](DOC_FOTO/Снимок экрана 2024-12-31 040410.png)
+ ![Přihlášení](DOC_FOTO/040410.png)
 
 
 ## Prohlížení knih
@@ -115,7 +115,7 @@ Detaily knihy obsahují:
 
 
 
- ![Knihy](DOC_FOTO/Снимок экрана 2024-12-31 040647.png)
+ ![Knihy](DOC_FOTO/040647.png)
 
 
 
@@ -128,8 +128,8 @@ Pro napsání recenze:
 3. Posuňte se dolů k sekci "Napsat recenzi".
 4. Vyplňte formulář pro recenzi:
 
-1. **Hodnocení:** Vyberte 1-5 hvězdiček
-2. **Text recenze:**
+ **Hodnocení:** Vyberte 1-5 hvězdiček
+ **Text recenze:**
 
 1. Maximální délka: 10000 znaků
 
@@ -138,18 +138,19 @@ Pro napsání recenze:
 
 
 
-5. Klikněte na tlačítko "Odeslat recenzi".
+  Klikněte na tlačítko "Odeslat recenzi".
 
 
 
- ![Psaní recenyí](DOC_FOTO/Снимок экрана 2024-12-31 040805.png)
+ ![Psaní recenyí](DOC_FOTO/040805.png)
 
 
 ## Uživatelský profil
 
+Pro přístup k profilu klikněte na své uživatelské jméno v horní části stránky.
 Ve svém profilu můžete:
 
-1. Zobrazit své osobní údaje:
+ Zobrazit své osobní údaje:
 
 1. Uživatelské jméno
 2. E-mail
@@ -157,7 +158,7 @@ Ve svém profilu můžete:
 
 
 
-2. Změnit heslo:
+ Změnit heslo:
 
 1. Zadejte současné heslo
 2. Zadejte nové heslo (stejná pravidla jako při registraci)
@@ -165,14 +166,14 @@ Ve svém profilu můžete:
 
 
 
-3. Zobrazit seznam vašich recenzí:
+ Zobrazit seznam vašich recenzí:
 
 1. Odkaz na knihu
 2. Vaše hodnocení
 
 
 
-4. Odstranit své recenze:
+ Odstranit své recenze:
 
 1. Klikněte na tlačítko "Delete" u příslušné recenze
 2. Potvrďte smazání
@@ -181,13 +182,11 @@ Ve svém profilu můžete:
 
 
 
-Pro přístup k profilu klikněte na své uživatelské jméno v horní části stránky.
+
+ ![Profil](DOC_FOTO/040719.png)
 
 
- ![Profil](DOC_FOTO/Снимок экрана 2024-12-31 040719.png)
-
-
-## Administrátorské funkce
+## Administrátorské funkce  (#administrátorské-funkce)
 
 Pro přístup k administrátorskému panelu klikněte na "Admin Panel" v horní části stránky.
 Pokud jste administrátor, máte přístup k dalším funkcím:
@@ -195,8 +194,8 @@ Pokud jste administrátor, máte přístup k dalším funkcím:
 ### Přidávání nových knih:
 
 
-1. Vyplňte všechny povinné údaje o knize.
-3. Nahrajte obrázek obálky knihy.
+ Vyplňte všechny povinné údaje o knize.
+ Nahrajte obrázek obálky knihy.
 
 - **Název knihy** (povinné, min 3, max. 50 znaků)
 - **Autor** (povinné, min 3, max. 50 znaků)
@@ -211,18 +210,10 @@ Pokud jste administrátor, máte přístup k dalším funkcím:
 - Maximální velikost: 2 MB
 
 
-4. Klikněte na "Přidat knihu".
+ Klikněte na "Přidat knihu".
 
 
- ![Add knih](DOC_FOTO/Снимок экрана 2024-12-31 040729.png)
-
-
-### Úprava existujících knih:
-
-- Můžete upravit všechny výše uvedené údaje
-- Při úpravě obrázku obálky platí stejná pravidla jako při přidávání
-
- !Úprava](DOC_FOTO/Снимок экрана 2024-12-31 040842.png)
+ ![Add knih](DOC_FOTO/040729.png)
 
 ### Správa uživatelů:
 
@@ -230,7 +221,20 @@ Pokud jste administrátor, máte přístup k dalším funkcím:
 - Přidělit/odebrat administrátorská práva
 
 
- ![Uživately](DOC_FOTO/Снимок экрана 2024-12-31 040742.png)
+ ![Uživately](DOC_FOTO/040742.png)
+
+### Mazání knih:
+
+- Klikněte na tlačítko "Smazat" u příslušné knihy v seznamu
+
+ ### Úprava existujících knih:
+
+- Můžete upravit všechny výše uvedené údaje
+- Při úpravě obrázku obálky platí stejná pravidla jako při přidávání
+
+ ![Úprava](DOC_FOTO/040842.png)
+
+
 
 
 
