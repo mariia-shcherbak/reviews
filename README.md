@@ -186,7 +186,7 @@ Ve svém profilu můžete:
  ![Profil](DOC_FOTO/040719.png)
 
 
-## Administrátorské funkce  (#administrátorské-funkce)
+## Administrátorské funkce  
 
 Pro přístup k administrátorskému panelu klikněte na "Admin Panel" v horní části stránky.
 Pokud jste administrátor, máte přístup k dalším funkcím:
